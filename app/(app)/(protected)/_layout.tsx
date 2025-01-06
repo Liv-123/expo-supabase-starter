@@ -3,6 +3,8 @@ import React from "react";
 
 import { colors } from "@/constants/colors";
 import { useColorScheme } from "@/lib/useColorScheme";
+import { View } from "react-native";
+import { Image } from "@/components/image";
 
 export default function ProtectedLayout() {
 	const { colorScheme } = useColorScheme();
@@ -21,7 +23,7 @@ export default function ProtectedLayout() {
 					colorScheme === "dark"
 						? colors.dark.foreground
 						: colors.light.foreground,
-				tabBarShowLabel: false,
+				tabBarShowLabel: true,
 			}}
 		>
 			<Tabs.Screen name="index" options={{ title: "Home" }} />
